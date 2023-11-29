@@ -1,15 +1,11 @@
-# [Express](./src/presentation/bk-express-server.ts)
+import express from "express";
+import path from "path";
 
-- Instalar Express
+export interface IServerOptions {
+  port: number;
+  publicFolder: string;
+}
 
-```
-    npm install express
-    npm i --save-dev @types/express
-```
-
-- Configuración
-
-```
 export class Server {
   private app = express();
 
@@ -42,8 +38,3 @@ export class Server {
     });
   }
 }
-```
-
-- Las configuraciones son mas sencillas que usando http1 y http2 directamente
-
-> [Inicio](./README.md) | [Anterior](./http2.md) |[Siguiente](./deployment.md)
